@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f400c240-4fda-40f8-aad7-af3da70c55ca">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT * FROM  church_members_records where Year_Of_Study !="Associate" AND Year_Of_Study !="2" AND Jumuiya='St.Bridgits' ORDER BY Id ASC;]]>
+	</queryString>
+	<field name="Id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Reg_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Phone_Number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="County" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Jumuiya" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Parish" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Diocese" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Year_Of_Study" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Faculty" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Course" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Dat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Image" class="java.lang.Object">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="126" y="3" width="293" height="42" uuid="a566b7a6-e9f8-4044-9ea5-fc1952ba0eaa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[KISII UNIVERSITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="144" y="45" width="254" height="32" uuid="bb525706-da5f-4f10-84e5-aab1246d23dd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="20" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[St. Michael Catholic Action]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="77" width="240" height="29" backcolor="#6666FF" uuid="1acaa7e3-79c3-4e7f-bd45-1210d3f02e7d"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[St.Bridgits]]></text>
+			</staticText>
+			<image>
+				<reportElement x="449" y="0" width="103" height="77" uuid="a6654cff-9f98-49fa-ac7a-f498c372d2d1"/>
+				<imageExpression><![CDATA["E:\\images\\CA_Logo.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="108" height="94" uuid="3926f22f-d372-48ab-8d3c-4f9ff33ed9a7"/>
+				<imageExpression><![CDATA["E:\\images\\KisiiUniveLogo.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement mode="Opaque" x="1" y="122" width="554" height="1" backcolor="#0033CC" uuid="619472f0-da82-4c0f-bff0-86bc0a988162"/>
+			</line>
+			<line>
+				<reportElement x="14" y="106" width="530" height="1" backcolor="#3366FF" uuid="5f98df83-e47f-46e3-b57c-3eb6c07c412c"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="0ac122a7-0a3d-4203-936b-47c8f18558b3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="14" y="0" width="24" height="15" forecolor="#736343" uuid="35090fb6-8939-43bf-83b1-56d765d45c0a"/>
+				<text><![CDATA[#]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="0" width="92" height="15" forecolor="#736343" uuid="35f29762-6dba-4a15-bc23-de87eee95eb5"/>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="0" width="92" height="15" forecolor="#736343" uuid="bc247db7-e027-47a2-9637-85c1dca5bc54"/>
+				<text><![CDATA[Reg No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="294" y="0" width="51" height="15" forecolor="#736343" uuid="95ecd720-28e8-4134-b925-792a4a2f6951"/>
+				<text><![CDATA[Phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="398" y="0" width="51" height="15" forecolor="#736343" uuid="1e58440b-6e1c-45a5-a1bf-25f0879d7492"/>
+				<text><![CDATA[Jumuiya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="512" y="0" width="40" height="15" forecolor="#736343" uuid="5967ac8f-f1ea-4a29-a189-f0f85b6a5e2c"/>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="7175f86c-5afa-4aa2-bee6-b1df4434369a"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="4" y="0" width="34" height="15" uuid="bec183a0-1d88-4e76-ba07-8718d77fe83d"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="48" y="0" width="136" height="15" uuid="e2fa22b7-363b-4ab7-864f-485266995dab"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="ecc1535d-69d3-47da-99fa-b0d34e4c5324"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Reg_Number}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="93ec507f-8419-4584-bf2c-9451365df459"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Phone_Number}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="357" y="0" width="133" height="15" uuid="ea51b7e7-3ca5-45d3-9024-6ba2693e50af"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Jumuiya}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="512" y="0" width="32" height="15" uuid="81fbea24-2a83-4b72-b7d3-c7890e68ff36"/>
+					<textElement>
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Year_Of_Study}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="84" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="3c03de79-de61-4c10-b7f9-579372d10a13"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<componentElement>
+				<reportElement x="344" y="26" width="200" height="35" uuid="b0cd77a8-41c7-42ea-8d5b-ad3dbc44c47b"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="EAN128" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA["1234"]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<staticText>
+				<reportElement x="33" y="26" width="146" height="20" uuid="1ec9daba-3ccf-4ec2-8dcf-1bacb0886483"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Total Registered Members=]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="59" width="61" height="25" forecolor="#0066FF" uuid="311ba2ca-5436-4306-b3a9-5f2e3559ede5"/>
+				<imageExpression><![CDATA["E:\\FlashDisk\\CATHOLIC_ACTION\\src\\smstest\\images\\Twitter_25px.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="33" y="59" width="25" height="23" forecolor="#0066FF" uuid="4dc1ec85-453b-4f20-9b14-17cefd106894"/>
+				<imageExpression><![CDATA["E:\\FlashDisk\\CATHOLIC_ACTION\\src\\smstest\\images\\Facebook_25px.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="61" y="61" width="25" height="23" forecolor="#0066FF" uuid="f57ad25b-c040-46d2-9eeb-81c96e851138"/>
+				<imageExpression><![CDATA["E:\\FlashDisk\\CATHOLIC_ACTION\\src\\smstest\\images\\Email_25px.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="92" y="61" width="25" height="21" forecolor="#0066FF" uuid="36c74c59-fcb1-45f8-94fd-4956947b23f5"/>
+				<imageExpression><![CDATA["E:\\FlashDisk\\CATHOLIC_ACTION\\src\\smstest\\images\\Phone_25px.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="117" y="61" width="31" height="23" forecolor="#0066FF" uuid="8688c45d-5723-4ed8-a221-a160ce098fb0"/>
+				<imageExpression><![CDATA["E:\\FlashDisk\\CATHOLIC_ACTION\\src\\smstest\\images\\Website_25px.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="179" y="26" width="31" height="20" uuid="1d0686d2-74cc-419d-b236-0bb7ab777198"/>
+				<textElement textAlignment="Center">
+					<font fontName="Palatino Linotype" size="14"/>
+				</textElement>
+				<text><![CDATA[88]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="48" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="24" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="abca9aec-e7ec-4e37-b570-8e4f3e94afe5"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="9b71819d-a78a-4ee0-88a5-aa0192288699"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="569fece3-f9b4-4da5-9c55-9498601cb91c"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="de7688e9-fe95-4e7c-a212-7aa52fc67916"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="5" width="100" height="20" uuid="89616c90-ba91-4a03-8bcc-a5744fd16d16"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[@stmichaelksuca1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="108" y="5" width="186" height="20" uuid="fcaa80b4-b6b9-4975-adb0-12820afc78b0"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[stmichaelcatholicaction@gmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="5" width="100" height="20" uuid="e097a062-1638-47ee-bffe-c944aeaeda26"/>
+				<text><![CDATA[+254790366848]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

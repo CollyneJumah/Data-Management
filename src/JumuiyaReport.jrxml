@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad7b2c0e-3827-4f59-8db7-92436acdc9de">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     church_members_records.`Id` AS church_members_records_Id,
+     church_members_records.`Name` AS church_members_records_Name,
+     church_members_records.`Reg_Number` AS church_members_records_Reg_Number,
+     church_members_records.`Phone_Number` AS church_members_records_Phone_Number,
+     church_members_records.`Jumuiya` AS church_members_records_Jumuiya,
+     church_members_records.`Year_Of_Study` AS church_members_records_Year_Of_Study,
+     church_members_records.`Dat` AS church_members_records_Dat,
+     church_members_records.`Gender` AS church_members_records_Gender
+FROM
+     `church_members_records` church_members_records
+ where  church_members_records.`Jumuiya`="ST.THOMAS AQUINUS";]]>
+	</queryString>
+	<field name="church_members_records_Id" class="java.lang.Integer"/>
+	<field name="church_members_records_Name" class="java.lang.String"/>
+	<field name="church_members_records_Reg_Number" class="java.lang.String"/>
+	<field name="church_members_records_Phone_Number" class="java.lang.String"/>
+	<field name="church_members_records_Jumuiya" class="java.lang.String"/>
+	<field name="church_members_records_Year_Of_Study" class="java.lang.String"/>
+	<field name="church_members_records_Dat" class="java.lang.String"/>
+	<field name="church_members_records_Gender" class="java.lang.String"/>
+	<group name="church_members_records_Reg_Number">
+		<groupExpression><![CDATA[$F{church_members_records_Reg_Number}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="66" width="187" height="26" uuid="a876468d-05ab-4455-8c17-1d1af998e978"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[St. Thomas Aquinus]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="6" width="101" height="74" uuid="ff407b25-dfa2-4b96-b34f-048ef939e670"/>
+				<imageExpression><![CDATA["G:\\images\\KisiiUniveLogo.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="449" y="5" width="94" height="75" uuid="95faab2c-4fcf-4e25-9a2d-7d77c2ced139"/>
+				<imageExpression><![CDATA["G:\\images\\caLOGO#.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="184" y="6" width="196" height="24" uuid="d6a08c57-ed78-41b6-9b3c-9762cd125ecb"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Kisii University]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="30" width="213" height="20" uuid="1c571a38-2f6c-4d2d-a9df-522f21c753fa"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[St. Michael Catholic Action]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="425" splitType="Stretch">
+			<staticText>
+				<reportElement x="113" y="0" width="64" height="20" uuid="8a127058-6788-473b-a76c-23dc40aa1861"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Reg Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="251" y="0" width="66" height="20" uuid="59c4b06f-5be1-4f94-9d1d-d432427944ae"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Jumuiya]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="251" y="37" width="79" height="20" uuid="893ac7dc-445d-4f8d-bb21-17956f17dc49"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Jumuiya}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="26" y="37" width="87" height="20" uuid="d31e14dc-80e9-46e1-bf27-f0f6d098f3f7"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="193" y="0" width="44" height="20" uuid="084574c7-8f81-4d87-87ef-d256a5ee1ec4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Phone]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="37" width="26" height="20" uuid="36b59d95-318a-4fa2-93fe-0c9c9eae648a"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Id}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="0" width="54" height="20" uuid="537ede48-ba43-4473-b376-4168eebdf579"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="0" width="13" height="20" uuid="5f7ad2fc-6dd3-40c2-9107-bb5fae474eea"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="113" y="37" width="64" height="20" uuid="28f4551d-12dc-47e5-b8f6-860bc1c802d3"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Reg_Number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="317" y="0" width="37" height="20" uuid="c0402446-eb20-457c-994b-3d8422c17625"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Year]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="54" height="20" uuid="ec8f63ff-7d42-4f2e-8348-d3f76ef3f41f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="333" y="37" width="64" height="20" uuid="f5a2f55e-128c-48bf-a54f-6991d75ec938"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Year_Of_Study}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="464" y="37" width="91" height="20" uuid="76207717-e85e-41a2-8d46-a44b04464baf"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Dat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="37" width="74" height="20" uuid="94896cac-8f91-48de-91ac-e03187a714c5"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Phone_Number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="55" y="0" width="46" height="20" uuid="effefecb-3ecd-4084-b74b-9ea1a2137ffb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="397" y="37" width="67" height="20" uuid="e8ca9531-383c-481f-8d95-1f851e799b45"/>
+				<textFieldExpression><![CDATA[$F{church_members_records_Gender}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="58" splitType="Stretch"/>
+	</summary>
+</jasperReport>
